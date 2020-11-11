@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <th>Name</th>
+        <th>Telephone</th>
+        <th>Role</th>
+        <th></th>
+    </thead>
+    <tbody id="employeeBody">
+        <% _.each(myEmployees, function(myEmployee){ %>
+        <tr>
+            <td>##Backend Loaded## <%= myEmployee.firstname %> <%= myEmployee.lastname %></td>
+            <td><%= myEmployee.telephone %></td>
+            <td><%= myEmployee.role %></td>
+            <td><a href="/employees/show/<%= myEmployee.id %>">Show</a></td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
